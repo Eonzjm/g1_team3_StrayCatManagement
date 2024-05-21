@@ -18,7 +18,6 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        box-shadow: 0 0 20px rgba(1, 1, 1, 0.5); /* Add shadow effect */
     }
     .login-container {
         position: absolute;
