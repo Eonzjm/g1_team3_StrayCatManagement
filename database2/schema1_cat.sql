@@ -16,30 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `logOn`
+-- Table structure for table `cat`
 --
 
-DROP TABLE IF EXISTS `logOn`;
+DROP TABLE IF EXISTS `cat`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `logOn` (
-  `staffID` varchar(24) NOT NULL,
-  `passWord` varchar(24) NOT NULL,
-  `Role` varchar(45) NOT NULL,
-  `staffName` varchar(45) NOT NULL,
-  PRIMARY KEY (`staffID`),
-  UNIQUE KEY `staffID_UNIQUE` (`staffID`),
-  UNIQUE KEY `staffName_UNIQUE` (`staffName`)
+CREATE TABLE `cat` (
+  `catID` varchar(12) NOT NULL,
+  `catName` varchar(12) NOT NULL,
+  `introduction` varchar(100) NOT NULL,
+  `page` varchar(4) NOT NULL,
+  PRIMARY KEY (`catID`),
+  UNIQUE KEY `catID_UNIQUE` (`catID`),
+  UNIQUE KEY `catName_UNIQUE` (`catName`),
+  UNIQUE KEY `introduction_UNIQUE` (`introduction`),
+  UNIQUE KEY `page_UNIQUE` (`page`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `logOn`
+-- Dumping data for table `cat`
 --
 
-LOCK TABLES `logOn` WRITE;
-/*!40000 ALTER TABLE `logOn` DISABLE KEYS */;
-/*!40000 ALTER TABLE `logOn` ENABLE KEYS */;
+LOCK TABLES `cat` WRITE;
+/*!40000 ALTER TABLE `cat` DISABLE KEYS */;
+INSERT INTO `cat` VALUES ('2101','miqi','Blue green eyes, generally sweet, love to attract people','1'),('2102','Simba','Sticky and intelligent, with emerald green eyes, strong maternal instincts','2'),('2103','Bella','Large gross hair, blue eyes, stable personality','3'),('2104','Kitty','Sweet and lovely, lively personality, love interaction','4'),('2105','Luna','Big round eyes, lively and playful personality','5');
+/*!40000 ALTER TABLE `cat` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-10 10:50:13
+-- Dump completed on 2024-05-21 11:17:33

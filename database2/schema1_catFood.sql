@@ -16,32 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `cat`
+-- Table structure for table `catFood`
 --
 
-DROP TABLE IF EXISTS `cat`;
+DROP TABLE IF EXISTS `catFood`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `cat` (
-  `catID` varchar(12) NOT NULL,
-  `catName` int NOT NULL,
-  `introduction` varchar(100) NOT NULL,
-  `page` varchar(4) NOT NULL,
-  PRIMARY KEY (`catID`),
-  UNIQUE KEY `catID_UNIQUE` (`catID`),
-  UNIQUE KEY `catName_UNIQUE` (`catName`),
-  UNIQUE KEY `introduction_UNIQUE` (`introduction`),
-  UNIQUE KEY `page_UNIQUE` (`page`)
+CREATE TABLE `catFood` (
+  `foodID` varchar(24) NOT NULL,
+  `PurchaseQuantity` int NOT NULL,
+  `price` varchar(100) NOT NULL,
+  `QRcode` varchar(255) NOT NULL,
+  `literalPicture` varchar(255) NOT NULL,
+  PRIMARY KEY (`foodID`),
+  UNIQUE KEY `foodID_UNIQUE` (`foodID`),
+  UNIQUE KEY `QRcode_UNIQUE` (`QRcode`),
+  UNIQUE KEY `literalPicture_UNIQUE` (`literalPicture`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cat`
+-- Dumping data for table `catFood`
 --
 
-LOCK TABLES `cat` WRITE;
-/*!40000 ALTER TABLE `cat` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cat` ENABLE KEYS */;
+LOCK TABLES `catFood` WRITE;
+/*!40000 ALTER TABLE `catFood` DISABLE KEYS */;
+INSERT INTO `catFood` VALUES ('701',1,'10','1','1'),('702',2,'20','2','2'),('703',3,'30','3','3'),('704',4,'40','4','4'),('705',5,'50','5','5');
+/*!40000 ALTER TABLE `catFood` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-10 10:50:13
+-- Dump completed on 2024-05-21 11:17:33
