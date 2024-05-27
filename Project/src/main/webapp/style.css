@@ -56,3 +56,11 @@
     .login-container button:hover {
         opacity: 0.8;
     }
+    .button-container{
+        display: flex;
+        justify-content:space-between;
+        margin-top: 10px;
+    }
+    .button-container button{
+        width:45%;
+    }
