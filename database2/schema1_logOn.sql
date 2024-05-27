@@ -16,34 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `management`
+-- Table structure for table `logOn`
 --
 
-DROP TABLE IF EXISTS `management`;
+DROP TABLE IF EXISTS `logOn`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `management` (
-  `managerID` varchar(12) NOT NULL,
+CREATE TABLE `logOn` (
+  `staffID` varchar(24) NOT NULL,
   `passWord` varchar(24) NOT NULL,
-  `catName` int NOT NULL,
-  `catID` varchar(12) NOT NULL,
-  `introduction` varchar(100) NOT NULL,
-  `httpCode` tinyint NOT NULL,
-  PRIMARY KEY (`managerID`),
-  UNIQUE KEY `managerID_UNIQUE` (`managerID`),
-  UNIQUE KEY `catName_UNIQUE` (`catName`),
-  UNIQUE KEY `catID_UNIQUE` (`catID`),
-  UNIQUE KEY `introduction_UNIQUE` (`introduction`)
+  `Role` varchar(45) NOT NULL,
+  `staffName` varchar(45) NOT NULL,
+  PRIMARY KEY (`staffID`),
+  UNIQUE KEY `staffID_UNIQUE` (`staffID`),
+  UNIQUE KEY `staffName_UNIQUE` (`staffName`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `management`
+-- Dumping data for table `logOn`
 --
 
-LOCK TABLES `management` WRITE;
-/*!40000 ALTER TABLE `management` DISABLE KEYS */;
-/*!40000 ALTER TABLE `management` ENABLE KEYS */;
+LOCK TABLES `logOn` WRITE;
+/*!40000 ALTER TABLE `logOn` DISABLE KEYS */;
+INSERT INTO `logOn` VALUES ('501','1234','staff','zjm'),('502','1234','staff','lxz'),('503','1234','staff','whz'),('504','1234','staff','szp'),('505','1234','staff','hsq');
+/*!40000 ALTER TABLE `logOn` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -55,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-10 10:50:13
+-- Dump completed on 2024-05-21 11:17:33
