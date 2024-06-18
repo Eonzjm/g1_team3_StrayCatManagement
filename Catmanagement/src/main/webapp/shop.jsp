@@ -1,12 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>商城</title>
-</head>
-<body>
-
-</body>
-</html>
+<h1>商城</h1>
+<p>这里是商城</p>

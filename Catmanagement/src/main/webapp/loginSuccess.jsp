@@ -58,6 +58,7 @@
         text-decoration: none;
         color: #333;
         font-weight: bold;
+        cursor: pointer;
     }
     .sidebar ul li a:hover {
         color: #4CAF50;
@@ -76,15 +77,40 @@
     <div class="content">
         <div class="sidebar">
             <ul>
-                <li><a href="#">猫咪介绍</a></li>
-                <li><a href="#">商城</a></li>
-                <li><a href="#">公告</a></li>
-                <li><a href="#">联系我们</a></li>
+                <li><a id="cat" href="#">猫咪</a></li>
+                <li><a id="shop" href="#">商城</a></li>
+                <li><a id="notice" href="#">公告</a></li>
+                <li><a id="contact" href="#">联系我们</a></li>
             </ul>
         </div>
-        <div class="main-content">
-            <!-- 添加个图片 -->
+        <div class="main-content" id="main-content">
+            <%@ include file="cat.jsp" %>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll(".sidebar ul li a");
+            const contentDiv = document.getElementById("main-content");
+
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    
+                    // 获取链接 ID 以确定要加载的 JSP 文件
+                    const page = this.id + ".jsp";
+                    
+                    // 通过 AJAX 请求加载内容
+                    const xhr = new XMLHttpRequest();
+                    xhr.open("GET", page, true);
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            contentDiv.innerHTML = xhr.responseText;
+                        }
+                    };
+                    xhr.send();
+                });
+            });
+        });
+    </script>
 </body>
 </html>
