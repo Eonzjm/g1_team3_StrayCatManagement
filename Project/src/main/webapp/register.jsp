@@ -7,7 +7,7 @@
 <title>注册界面</title>
 <style>
 </style>
-<link rel="stylesheet" href="style.css" type="text/css" />
+
 </head>
 <body>
     <div class="bg">
