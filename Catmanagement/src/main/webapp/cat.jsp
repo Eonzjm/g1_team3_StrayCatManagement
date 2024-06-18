@@ -3,6 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<title>猫咪介绍</title>
 <style>
     .cat-container {
         display: flex;
@@ -70,15 +71,6 @@
         width: 50px;
         text-align: center;
     }
-    .cat-intro {
-        width: 60%;
-        height: 500px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        resize: none; 
-        margin-bottom: 20px;
-    }
 </style>
 </head>
 <body>
@@ -90,7 +82,6 @@
         </div>
         <div class="cat-details">
             <h2>流浪猫介绍</h2>
-            
             <textarea class="cat-intro">这里是流浪猫的详细介绍...</textarea>
             <div class="navigation">
                 <button class="nav-btn">上一页</button>
