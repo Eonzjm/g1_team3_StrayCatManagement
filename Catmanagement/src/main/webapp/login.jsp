@@ -85,10 +85,10 @@ body, html {
                 </select>
                 
                 <label for="username"><b>用户名</b></label>
-                <input type="text" placeholder="输入用户名" name="username" required>
+                <input type="text" id="username" name="username" placeholder="输入用户名">
                 
                 <label for="password"><b>密码</b></label>
-                <input type="password" placeholder="输入密码" name="password" required>
+                <input type="password" id="pwd" name="pwd" placeholder="输入密码">
                 
                 <div class="button-container">
                     <button type="submit">登录</button>
