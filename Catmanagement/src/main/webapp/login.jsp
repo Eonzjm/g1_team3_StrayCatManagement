@@ -77,7 +77,7 @@ body, html {
     <div class="bg">
         <div class="login-container">
             <h2>登录</h2>
-            <form action="loginServlet" method="post">
+            <form action="LoginServlet" method="post">
             <label for="userType"><b>登录类型</b></label>
                 <select id="userType" name="userType">
                     <option value="user">用户</option>
@@ -87,7 +87,7 @@ body, html {
                 <label for="username"><b>用户名</b></label>
                 <input type="text" placeholder="输入用户名" name="username" required>
                 
-                <label for="password"><b>密码</b></label>
+                <label for="pwd"><b>密码</b></label>
                 <input type="password" placeholder="输入密码" name="password" required>
                 
                 <div class="button-container">

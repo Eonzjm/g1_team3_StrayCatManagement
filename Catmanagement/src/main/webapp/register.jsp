@@ -96,7 +96,7 @@ body, html {
 
         // 验证邮箱格式
         if (document.forms[0].email.value.trim() != "") {
-            var exp = /^([a-zA-Z0-9._-])+@([a-zA-Z0-9._-])+(\.[a-zA-Z0-9._-])+$/;
+            var exp = /^([a-zA-Z0-9._-])+@([a-zA-Z0-9._-])+(\.[a-zA-Z0-9._-])+/;
             if (exp.test(document.forms[0].email.value.trim()) == false) {
                 pass = false;
                 message += "邮箱地址格式不正确！\n";
@@ -140,7 +140,7 @@ body, html {
     <div class="bg">
         <div class="register-container">
             <h2>注册</h2>
-            <form action="registerServlet" method="post">
+            <form action="UserRegServlet" method="post">
                 <label for="username"><b>用户名</b></label>
                 <input type="text" id="username" name="username" placeholder="输入用户名" value="${currUser.username}"/>
                 
