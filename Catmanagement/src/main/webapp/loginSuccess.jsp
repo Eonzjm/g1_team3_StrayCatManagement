@@ -77,10 +77,10 @@
     <div class="content">
         <div class="sidebar">
             <ul>
-                <li><a id="cat-intro" href="#">猫咪介绍</a></li>
+                <li><a id="cat" href="#">猫咪</a></li>
                 <li><a id="shop" href="#">商城</a></li>
                 <li><a id="notice" href="#">公告</a></li>
-                <li><a id="contact-us" href="#">联系我们</a></li>
+                <li><a id="contact" href="#">联系我们</a></li>
             </ul>
         </div>
         <div class="main-content" id="main-content">

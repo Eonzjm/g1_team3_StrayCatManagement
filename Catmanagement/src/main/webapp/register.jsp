@@ -96,23 +96,21 @@ body, html {
 
         // 验证邮箱格式
         if (document.forms[0].email.value.trim() != "") {
-            var exp = /^([a-zA-Z0-9._-])+@([a-zA-Z0-9._-])+(\.[a-zA-Z0-9._-])+$/;
+        	var exp=/^([a-zA-Z0-9._-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
             if (exp.test(document.forms[0].email.value.trim()) == false) {
                 pass = false;
                 message += "邮箱地址格式不正确！\n";
             }
         }
 
-        if (pass) {
+        if (pass)
             // 验证用户名是否存在
-            if (testUserName(document.forms[0].username.value.trim()) == 'y') {
+            if (testUserName(document.forms[0].username.value.trim()) == 'y') 
                 document.forms[0].submit();
-            } else {
+            else 
                 alert("用户名已经存在。请更换用户名！");
-            }
-        } else {
+        else
             alert(message);
-        }
     }
 
     function testUserName(userName) {
