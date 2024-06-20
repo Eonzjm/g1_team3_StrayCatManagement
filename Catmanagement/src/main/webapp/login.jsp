@@ -4,98 +4,36 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>登录界面</title>
-<style>
-body, html {
-        height: 100%;
-        margin: 0;
-        font-family: Arial, sans-serif;
-
-    }
-    .bg {
-        background-image: url('background.jpg');
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .bg::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); 
-    z-index: 1;
-}
-    .login-container{
-        position: absolute;
-        left: 80%;
-        top: 55%;
-        transform: translate(-50%, -75%);
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 2;
-    }
-    .login-container input[type="text"],
-    .login-container input[type="password"],
-    .login-container select,
-    .login-container button {
-        width: 100%;
-        padding: 10px;
-        margin: 5px 0 20px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-    }
-    .login-container button{
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        margin: 10px 0;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-    }
-    .login-container button:hover {
-        opacity: 0.8;
-    }
-    .button-container{
-        display: flex;
-        justify-content:space-between;
-        margin-top: 10px;
-    }
-    .button-container button{
-        width:45%;
-    }
-</style>
+<title>登陆界面</title>
+<link rel="stylesheet" href="layout.css" type="text/css" />
+<link rel="stylesheet" href="form.css" type="text/css" />
 </head>
 <body>
-    <div class="bg">
-        <div class="login-container">
-            <h2>登录</h2>
-            <form action="loginServlet" method="post">
-            <label for="userType"><b>登录类型</b></label>
-                <select id="userType" name="userType">
-                    <option value="user">用户</option>
-                    <option value="admin">管理员</option>
-                </select>
-                
-                <label for="username"><b>用户名</b></label>
-                <input type="text" id="username" name="username" placeholder="输入用户名">
-                
-                <label for="password"><b>密码</b></label>
-                <input type="password" id="pwd" name="pwd" placeholder="输入密码">
-                
-                <div class="button-container">
-                    <button type="submit">登录</button>
-                    <button type="button" onclick="location.href='register.jsp'">注册</button>
-                </div>
-            </form>
-        </div>
-    </div>
+	<header><jsp:include page="header.jsp" /></header>
+	<nav><jsp:include page="nav.jsp" /></nav>
+	<div class="container" >
+	    <div class="left"></div>
+	    <div class="mid">
+			<br/><h2 align="center">用户登录</h2>
+    		<br/>
+	        <form action="LoginServlet" method="post">
+				  <p>请输入用户名、密码，然后点击“提交”按钮登录。</p>
+				  <div>
+				    <label for="name">用户名:</label>
+				    <input type="text" id="name" name="name" />
+				  </div>
+				  <div>
+				    <label for="pwd">密码:</label>
+				    <input type="password" id="pwd" name="pwd" />
+				  </div>
+				  <div>
+				    <div class="column"></div>
+				    <div class="column"><button type="submit">提交</button>&nbsp;&nbsp;<button type="reset">重置</button></div>
+				  </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+			</form>
+		</div>
+	    <div class="right"></div>
+	</div>
+	<footer><jsp:include page="footer.jsp" /></footer>
 </body>
 </html>

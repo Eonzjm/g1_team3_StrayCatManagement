@@ -6,78 +6,16 @@
 <meta charset="UTF-8">
 <title>注册界面</title>
 <style>
-body, html {
-        height: 100%;
-        margin: 0;
-        font-family: Arial, sans-serif;
 
-    }
-   .bg {
-        background-image: url('background.jpg');
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .bg::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5); 
-        z-index: 1;
-    }
-    .register-container {
-        position: absolute;
-        left: 80%;
-        top: 55%;
-        transform: translate(-50%, -75%);
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 2;
-    }
-    .register-container input[type="text"],
-    .register-container input[type="password"],
-    .register-container button {
-        width: 100%;
-        padding: 10px;
-        margin: 5px 0 20px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-    }
-    .register-container button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        margin: 10px 0;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-    }
-    .register-container button:hover {
-        opacity: 0.8;
-    }
-    .button-container{
-        display: flex;
-        justify-content:space-between;
-        margin-top: 10px;
-    }
-    .button-container button{
-        width:45%;
-    }
 </style>
+<link rel="stylesheet" href="style.css" type="text/css" />
 <script type="text/javascript">
     function formVerify() {
         var pass = true;
         var message = "";
 
         // 验证用户名是否为空
-        if (document.forms[0].username.value.trim() == "") {
+        if (document.forms[0].name.value.trim() == "") {
             pass = false;
             message += "用户名不能为空！\n";
         }
@@ -105,7 +43,7 @@ body, html {
 
         if (pass)
             // 验证用户名是否存在
-            if (testUserName(document.forms[0].username.value.trim()) == 'y') 
+            if (testname(document.forms[0].name.value.trim()) == 'y') 
                 document.forms[0].submit();
             else 
                 alert("用户名已经存在。请更换用户名！");
@@ -113,10 +51,10 @@ body, html {
             alert(message);
     }
 
-    function testUserName(userName) {
+    function testname(name) {
         var result;
         var xmlhttp = new XMLHttpRequest();
-        var url = "TestUserNameServlet?uname=" + userName;
+        var url = "TestnameServlet?uname=" + name;
         xmlhttp.open("GET", url, false);
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -133,20 +71,21 @@ body, html {
         }
     }
 </script>
+
 </head>
 <body>
     <div class="bg">
         <div class="register-container">
             <h2>注册</h2>
-            <form action="registerServlet" method="post">
-                <label for="username"><b>用户名</b></label>
-                <input type="text" id="username" name="username" placeholder="输入用户名" value="${currUser.username}"/>
+            <form action="UserRegServlet" method="post">
+                <label for="name"><b>用户名</b></label>
+                <input type="text" id="name" name="name" placeholder="输入用户名" value="${currUser.name}"/>
                 
                 <label for="pwd"><b>密码</b></label>
                 <input type="password" id="pwd" name="pwd" placeholder="输入密码" value="${currUser.pwd}"/>
                 
                 <label for="pwdconfirm"><b>确认密码</b></label>
-                <input type="password" id="pwdconfirm" name="pwdconfirm" placeholder="确认密码" value="${currUser.pwdconfirm}"/>
+                <input type="password" id="pwdconfirm" name="pwdconfirm" placeholder="确认密码" value="${currUser.pwd}"/>
                 
                 <label for="email"><b>邮箱</b></label>
                 <input type="text" id="email" name="email" placeholder="输入邮箱" value="${currUser.email}"/>
