@@ -146,7 +146,7 @@ body, html {
                 <input type="password" id="pwd" name="pwd" placeholder="输入密码" value="${currUser.pwd}"/>
                 
                 <label for="pwdconfirm"><b>确认密码</b></label>
-                <input type="password" id="pwdconfirm" name="pwdconfirm" placeholder="确认密码" value="${currUser.pwdconfirm}"/>
+                <input type="password" id="pwdconfirm" name="pwdconfirm" placeholder="确认密码" value="${currUser.pwd}"/>
                 
                 <label for="email"><b>邮箱</b></label>
                 <input type="text" id="email" name="email" placeholder="输入邮箱" value="${currUser.email}"/>
