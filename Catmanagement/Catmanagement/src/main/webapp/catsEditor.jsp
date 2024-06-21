@@ -11,7 +11,7 @@
             font-family: Arial, sans-serif;
     }
     .background {
-        position: absolute;
+        position: absolute; 
         top: 5;
         left: 0;
         width: 100%;
@@ -141,7 +141,7 @@
 		$(":file").val("");
 	}
 	function initState(){
-		state = 0;
+		state = 0;//初始状态
 		$(":text").attr("disabled", "true");
 		$(":file").attr("disabled", "true");
 		$("#btnSave").attr("disabled", "true");
@@ -153,16 +153,16 @@
 		$(":file").removeAttr("disabled");
 	}
 	function modiRow(){
-		state = 1;
+		state = 1;//修改状态
 		editState();
 		$("#btnModify").attr("disabled", "true");
 		$("#btnSave").removeAttr("disabled");
 	}
 	function newRow(){
-		state = 2;
+		state = 2;//添加状态
 		if(curRow != null){
 			curRow.className="";
-			curRow = null;
+			curRow = null;//清楚当前行的选中状态
 		}
 		$("#btnNew").attr("disabled", "true");
 		$("#btnDelete").attr("disabled", "true");
@@ -246,20 +246,20 @@
 				       type: "POST",
 					   data: formData,
 					   datatype: "text",
-					   cache: false,
-			           async: true,
+					   cache: false,//禁用缓存
+			           async: true,//异步请求
 			           processData: false,
-			           contentType: false,
+			           contentType: false,//不改变传给服务器的数据
 			           success: function(data){
 					       if(data=='n'){
 					    	   alert("由于服务器原因，保存不成功。请稍后重试！");
 					       }
 				           else{
-				               window.location.href="GetCatServlet?pageSize="+pageSize+"&&curPage="+curPage;  //reload page
+				               window.location.href="GetCatServlet?pageSize="+pageSize+"&&curPage="+curPage;  //刷新界面了相当于是
 					           $("#btnSave").attr("disabled", "true");
 					           $("#btnModify").removeAttr("disabled");
 					           $(":text").attr("disabled", "true");
-							   $(":file").attr("disabled", "true");
+							   $(":file").attr("disabled", "true");//禁用那些按钮
 							   state = 0;
 				          }
 				       }
