@@ -49,7 +49,7 @@ public class CatModel {
 	}
 	
 	public int getCatsQty() {
-		int r = -1;  //如果返回-1，表示没有获得连接，应该稍后再试。
+		int r = -1;  
 		Connection con = ConnectionPool.getInstance().getConnection();
 		if(con != null) {
 			Statement st = null;
@@ -76,9 +76,9 @@ public class CatModel {
 		}
 		return r;
 	}
-	//第11次课新增：根据学生记录id删除学生
+	
 	public int delCat(int id) {
-		int r = -1;  //如果返回-1，表示没有获得连接，应该稍后再试。
+		int r = -1;  
 		Connection con = ConnectionPool.getInstance().getConnection();
 		if(con != null) {
 			PreparedStatement st = null;
@@ -101,9 +101,9 @@ public class CatModel {
 		}
 		return r;
 	}
-	//第12次课新增
+	
 	public int insertCat(Cat s) {
-		int r = -1;  //如果返回-1，表示没有获得连接，应该稍后再试。
+		int r = -1;  
 		Connection con = ConnectionPool.getInstance().getConnection();
 		if(con != null) {
 			PreparedStatement st = null;
@@ -138,7 +138,7 @@ public class CatModel {
 		return r;
 	}
 	public int updateCat(Cat s) {
-		int r = -1;  //如果返回-1，表示没有获得连接，应该稍后再试。
+		int r = -1;  
 		Connection con = ConnectionPool.getInstance().getConnection();
 		if(con != null) {
 			PreparedStatement st = null;

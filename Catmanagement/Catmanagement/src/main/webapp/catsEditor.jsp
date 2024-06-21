@@ -343,7 +343,7 @@
 
     <div class="sidebar">
         <a href="<%= response.encodeUrl("home.jsp") %>">主页</a>
-        <a href="<%= response.encodeUrl("catsEditor.jsp") %>">小猫之家</a>
+        <a href="<%= response.encodeUrl("catsEditor.jsp") %>">猫咪之家</a>
         <a href="<%= response.encodeUrl("shop.jsp") %>">商城</a>
         <a href="<%= response.encodeUrl("contact.jsp") %>">联系我们</a>
     </div>

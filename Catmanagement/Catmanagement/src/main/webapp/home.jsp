@@ -103,7 +103,7 @@
 
      <div class="sidebar">
         <a href="<%= response.encodeUrl("home.jsp") %>">主页</a>
-        <a href="<%= response.encodeUrl("GetCatServlet") %>">小猫之家</a>
+        <a href="<%= response.encodeUrl("GetCatServlet") %>">猫咪之家</a>
         <a href="<%= response.encodeUrl("shop.jsp") %>">商城</a>
         <a href="<%= response.encodeUrl("contact.jsp") %>">联系我们</a>
     </div>
@@ -112,6 +112,8 @@
     <div class="main-content">
         <h1>流浪猫管理系统</h1>
         <h2>欢迎来到我们的流浪猫管理系统！</h2>
+        <h3>你见过无家可归的流浪猫吗？你见过在寒冷的冬天，冻死在街头的小猫吗？你见过被野狗欺负伤痕累累的小猫咪吗？</h3>
+        <h3>如果你想帮助他们，或者你没见过，想见一下，欢迎使用我们的流浪猫管理系统！</h3>
         <!-- 你可以在这里添加更多的主页面内容 -->
     </div>
 </body>

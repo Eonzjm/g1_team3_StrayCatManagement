@@ -31,7 +31,7 @@
     .register-container {
         position: absolute;
         left: 80%;
-        top: 55%;
+        top: 65%;
         transform: translate(-50%, -75%);
         background-color: rgba(255, 255, 255, 0.8);
         padding: 20px;

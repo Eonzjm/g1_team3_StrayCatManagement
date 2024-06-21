@@ -94,7 +94,7 @@
 
  <div class="sidebar">
         <a href="<%= response.encodeUrl("home.jsp") %>">主页</a>
-        <a href="<%= response.encodeUrl("catsEditor.jsp") %>">小猫之家</a>
+        <a href="<%= response.encodeUrl("catsEditor.jsp") %>">猫咪之家</a>
         <a href="<%= response.encodeUrl("shop.jsp") %>">商城</a>
         <a href="<%= response.encodeUrl("contact.jsp") %>">联系我们</a>
 </div>
@@ -103,6 +103,7 @@
     <h1>联系栏</h1>
     <h2>如果有什么疑问，可以通过邮箱联系我们！</h2>
     <h3>我们的邮箱是：2115668830@qq.com</h3>
+    <h4>特此声明：本页面是由李先泽，吴宏臻，赵嘉铭同学制作，感谢您的使用！</h4>
 </div>
 
 </body>

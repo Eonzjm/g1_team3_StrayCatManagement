@@ -59,7 +59,7 @@ public class UserRegServlet extends HttpServlet {
 		} else {
 			request.setAttribute("currUser", user);
 			request.setAttribute("postError", "提交不成功，请再次尝试！");
-			RequestDispatcher dis = request.getRequestDispatcher("userReg.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("register.jsp");
 			dis.forward(request, response);
 			//response.sendRedirect(response.encodeRedirectURL("userReg.jsp"));
 		}

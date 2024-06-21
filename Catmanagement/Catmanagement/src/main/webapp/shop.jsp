@@ -162,7 +162,7 @@
 
 <div class="sidebar">
     <a href="<%= response.encodeUrl("home.jsp") %>">主页</a>
-    <a href="<%= response.encodeUrl("catsEditor.jsp") %>">小猫之家</a>
+    <a href="<%= response.encodeUrl("catsEditor.jsp") %>">猫咪之家</a>
     <a href="<%= response.encodeUrl("shop.jsp") %>">商城</a>
     <a href="<%= response.encodeUrl("contact.jsp") %>">联系我们</a>
 </div>
@@ -172,7 +172,7 @@
     <div class="shop-items">
         <div class="shop-item">
             <img src="food1.jpg">
-            <h3>猫粮1</h3>
+            <h3>三鹿猫粮</h3>
             <p>价格：￥50</p>
             <form>
                 <input type="hidden" name="product" value="猫粮">
@@ -182,8 +182,8 @@
         </div>
         <div class="shop-item">
             <img src="food2.jpg">
-            <h3>猫粮2</h3>
-            <p>价格：￥80</p>
+            <h3>精品猫粮</h3>
+            <p>价格：￥100</p>
             <form>
                 <input type="hidden" name="product" value="猫粮">
                 <input type="hidden" name="price" value="80">
@@ -192,8 +192,8 @@
         </div>
         <div class="shop-item">
             <img src="food3.jpg">
-            <h3>猫粮3</h3>
-            <p>价格：￥200</p>
+            <h3>御用猫粮</h3>
+            <p>价格：￥500</p>
             <form>
                 <input type="hidden" name="product" value="猫粮">
                 <input type="hidden" name="price" value="200">
